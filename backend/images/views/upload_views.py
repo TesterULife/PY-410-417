@@ -2,6 +2,7 @@ import uuid
 
 from django.shortcuts import render, redirect
 
+# from auth_service.jwt_decorators import jwt_required
 from ..forms import UploadFileForm
 from ..models import Files
 

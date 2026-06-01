@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, reverse
 from django.views.generic import DeleteView
 
+# from auth_service.jwt_decorators import jwt_required
 from ..models import Files
-
 
 def delete_img(request):
     image_id = request.GET.get('image_id')

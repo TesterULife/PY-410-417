@@ -17,8 +17,7 @@
 </head>
 <body>
 <aside>
-    <img src="{% static 'images/logos/tom.gif' %}" alt="Logo">
-
+    <img src="{% static 'images/logos/sf1.gif' %}" alt="Logo">
     <h3>Навигация</h3>
     <ul>
         <a href="{% url 'main' %}"><li><i class="fa-solid fa-house"></i>Главная</li></a>
@@ -28,6 +27,23 @@
         <a href="{% url 'db' %}"><li><i class="fa-solid fa-database"></i>Модель базы данных</li></a>
     </ul>
 </aside>
+
+<header>
+    <div class="top_bar">
+        <a href="{% url 'token_obtain_pair' %}"><i class="fa-solid fa-circle-arrow-down"></i>Получить токен</a>
+        <a href="{% url 'token_refresh' %}"><i class="fa-solid fa-arrows-rotate"></i>Обновить токен</a>
+        <a href="{% url 'admin:index' %}">
+            {% if request.user.is_authenticated %}
+            <i class="fa-solid fa-user"></i>
+            {{ request.user.username }}
+            {% else %}
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            Login
+            {% endif %}
+        </a>
+    </div>
+</header>
+
 <main>
     {% block content %}
     {% endblock %}

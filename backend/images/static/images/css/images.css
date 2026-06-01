@@ -185,3 +185,31 @@ aside img {
     display: block;
     margin: 20px auto;
 }
+
+.top_bar {
+    position: fixed;
+
+    top: 15px;
+    right: 30px;
+
+    display: flex;
+    gap: 20px;
+
+    z-index: 9999;
+}
+
+.top_bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all .12s ease;
+}
+
+.top_bar a:hover {
+    color: #DC143C;
+    transform: scale(1.05);
+}
+
+.top_bar i {
+    margin-right: 8px;
+}
